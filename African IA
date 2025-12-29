@@ -1,0 +1,13 @@
+import os
+from openai import OpenAI
+from prompts import BASE_PROMPT
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def generate_project(user_request: str):
+    prompt = BASE_PROMPT.format(user_request=user_request)
+    response = client.responses.create(
+        model="gpt-5",
+        input=prompt
+    )
+    return response.output_text

@@ -1,0 +1,8 @@
+from fastapi import FastAPI
+from ai import generate_project
+
+app = FastAPI()
+
+@app.post("/generate")
+def generate(data: dict):
+    return {"result": generate_project(data["request"])}

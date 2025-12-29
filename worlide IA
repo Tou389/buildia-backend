@@ -1,0 +1,11 @@
+BASE_PROMPT = """
+Tu es un développeur expert.
+
+Génère un projet SIMPLE et COMPLET basé sur :
+{user_request}
+
+Règles :
+- Code clair
+- Débutant-friendly
+- HTML/CSS/JS ou Flutter
+"""
